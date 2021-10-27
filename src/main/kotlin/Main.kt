@@ -1,13 +1,22 @@
+import part1.*
 import part1.Array
-import part1.Expression
-import part1.LinkedList
-import part1.StringReverser
 
 fun main() {
-    testIsBalanced("({AbC})")
-    testIsBalanced("{(AbC})")
-    testIsBalanced("}{")
-    testIsBalanced("({<[]>})")
+    testCustomStack()
+}
+
+fun testCustomStack() {
+    val customStack = Stack()
+    customStack.apply {
+        push(1)
+        push(3)
+        push(5)
+        val pop = pop()
+        println(pop)
+        val peek = peek()
+        println(peek)
+        println(isEmpty())
+    }
 }
 
 private fun testIsBalanced(string: String) {
