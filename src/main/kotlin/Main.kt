@@ -1,25 +1,36 @@
 import part1.Array
+import part1.Expression
 import part1.LinkedList
 import part1.StringReverser
 
 fun main() {
-    reverseAString("AbC")
+    testIsBalanced("({AbC})")
+    testIsBalanced("{(AbC})")
+    testIsBalanced("}{")
+    testIsBalanced("({<[]>})")
 }
 
-private fun reverseAString(string: String) {
+private fun testIsBalanced(string: String) {
+    println(Expression().isBalanced(string))
+}
+
+private fun testReverseAString(string: String) {
     println(StringReverser().reverse(string))
 }
 
 private fun testLinkedList() {
-    val ll = LinkedList()
-    ll.addLast(1)
-    ll.addLast(2)
-    ll.addLast(7)
-    ll.addFirst(5)
+    val ll = LinkedList().apply {
+        addLast(1)
+        addLast(2)
+        addLast(7)
+        addFirst(5)
+    }
     val indexOf = ll.indexOf(7)
     println(indexOf)
-    ll.removeFirst()
-    ll.removeLast()
+    ll.apply {
+        removeFirst()
+        removeLast()
+    }
     val size = ll.size()
     println(size)
 }
