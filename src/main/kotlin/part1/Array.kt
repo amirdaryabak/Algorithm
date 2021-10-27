@@ -1,3 +1,5 @@
+package part1
+
 class Array(length: Int) {
     private var items = IntArray(length)
     private var count = 0

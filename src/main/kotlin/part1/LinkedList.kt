@@ -1,3 +1,5 @@
+package part1
+
 class LinkedList {
     private var head: Node? = null
     private var tail: Node? = null

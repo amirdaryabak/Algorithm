@@ -1,6 +1,13 @@
-fun main() {
-    testLinkedList()
+import part1.Array
+import part1.LinkedList
+import part1.StringReverser
 
+fun main() {
+    reverseAString("AbC")
+}
+
+private fun reverseAString(string: String) {
+    println(StringReverser().reverse(string))
 }
 
 private fun testLinkedList() {
