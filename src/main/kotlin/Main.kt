@@ -5,7 +5,13 @@ import java.util.*
 import part1.LinkedList
 
 fun main() {
-    testQueueWithStacks()
+    testCharFinder()
+}
+
+fun testCharFinder() {
+    println(CharFinder.findTheFirstRepeatedChar("ASSDD"))
+    println(CharFinder.findTheFirstNonRepeatedChar("ASSD"))
+
 }
 
 fun testQueueWithStacks() {
