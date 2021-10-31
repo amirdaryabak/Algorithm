@@ -5,7 +5,23 @@ import java.util.*
 import part1.LinkedList
 
 fun main() {
-    testArrayQueue()
+    testQueueWithStacks()
+}
+
+fun testQueueWithStacks() {
+    val queue = QueueWithTwoStacks()
+    queue.apply {
+        enqueue(1)
+        enqueue(2)
+        enqueue(3)
+        println(peek())
+        println(dequeue())
+        println(dequeue())
+        println(peek())
+        println(isEmpty())
+        println(dequeue())
+        println(isEmpty())
+    }
 }
 
 fun testArrayQueue() {
