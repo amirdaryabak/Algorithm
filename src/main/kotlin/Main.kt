@@ -1,8 +1,17 @@
 import part1.*
 import part1.Array
+import part1.Stack
+import java.util.*
+import part1.LinkedList
 
 fun main() {
-    testCustomStack()
+    reverseAnQueueWithStack()
+}
+
+fun reverseAnQueueWithStack() {
+    val qr = QueueReverser()
+    val numbers: Queue<Int> = java.util.LinkedList<Int>(listOf(1, 2, 3))
+    println(qr.reverse(numbers, numbers.size))
 }
 
 fun testCustomStack() {
