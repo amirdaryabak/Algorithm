@@ -5,7 +5,19 @@ import java.util.*
 import part1.LinkedList
 
 fun main() {
-    testCharFinder()
+    testHashTable()
+}
+
+private fun testHashTable() {
+    val hashTable = HashTable()
+    hashTable.apply {
+        put(1, "A")
+        put(2, "B")
+        put(3, "C")
+        println(get(2))
+        remove(2)
+        println(get(2))
+    }
 }
 
 fun testCharFinder() {
